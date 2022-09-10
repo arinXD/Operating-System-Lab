@@ -1,0 +1,79 @@
+#include<stdio.h>
+#include<string.h>
+void main(){
+        char name[50];
+        int age=0;
+        int lenName=51;
+        //printf("%d",age);
+        printf("\n\tHello C\n\n");
+        while(lenName>50){
+                printf("What is ur name?: ");
+                scanf("%s",&name);
+                lenName=strlen(name);
+        }
+        while(age<1){
+                printf("How old are you?: ");
+                scanf("%d",&age);
+        }
+        printf("\n----------------------------\n");
+        printf("    Hello %s \n",name);
+        printf("    You r %d year old\n",age);
+        char d = system("date");
+        system("ls -la /home |more");
+}
+
+--result--
+-bash-4.1$ ./lab7
+
+        Hello C
+
+What is ur name?: arin
+How old are you?: 20
+
+----------------------------
+    Hello arin
+    You r 20 year old
+Thu Sep  1 14:10:33 ICT 2022
+total 852
+drwxr-xr-x. 207 root     root   4096 Jun 13 23:56 .
+dr-xr-xr-x.  26 root     root   4096 Aug 28 11:26 ..
+drwx------.  27 admin    admin  4096 Aug 30 13:11 admin
+drwx------.   2 root     root  16384 Oct 24  2012 lost+found
+drwx------.   4 osusr01  root   4096 Sep  1 13:21 osusr01
+drwx------.   4 osusr02  root   4096 Sep  1 13:35 osusr02
+drwx------.   3 osusr03  root   4096 Sep  1 14:01 osusr03
+drwx------.   5 osusr04  root   4096 Sep  1 13:34 osusr04
+drwx------.   5 osusr05  root   4096 Jul  7 14:34 osusr05
+drwx------.   6 osusr06  root   4096 Sep  1 13:22 osusr06
+drwx------.   4 osusr07  root   4096 Sep  1 13:38 osusr07
+drwx------.   3 osusr08  root   4096 Sep  1 13:37 osusr08
+drwx------.   4 osusr09  root   4096 Sep  1 13:34 osusr09
+drwx------.   5 osusr10  root   4096 Aug 18 14:48 osusr10
+drwx------.   3 osusr100 root   4096 Aug 18 14:08 osusr100
+drwx------.   2 osusr101 root   4096 Jul  3  2020 osusr101
+drwx------.   2 osusr102 root   4096 Jun 13 23:55 osusr102
+drwx------.   2 osusr103 root   4096 Jun 13 23:55 osusr103
+drwx------.   3 osusr104 root   4096 Jun 13 23:55 osusr104
+drwx------.   2 osusr105 root   4096 Jun 13 23:55 osusr105
+drwx------.   2 osusr106 root   4096 Jun 13 23:55 osusr106
+drwx------.   2 osusr107 root   4096 Jun 13 23:55 osusr107
+drwx------.   2 osusr108 root   4096 Jun 13 23:55 osusr108
+drwx------.   2 osusr109 root   4096 Jun 13 23:55 osusr109
+drwx------.   4 osusr11  root   4096 Aug  4 13:46 osusr11
+drwx------.   2 osusr110 root   4096 Jun 13 23:55 osusr110
+drwx------.   2 osusr111 root   4096 Jun 13 23:55 osusr111
+drwx------.   2 osusr112 root   4096 Jun 13 23:55 osusr112
+drwx------.   2 osusr113 root   4096 Jun 13 23:55 osusr113
+drwx------.   2 osusr114 root   4096 Jul 13  2021 osusr114
+drwx------.   2 osusr115 root   4096 Jun 13 23:55 osusr115
+drwx------.   2 osusr116 root   4096 Jun 13 23:55 osusr116
+drwx------.   2 osusr117 root   4096 Jun 13 23:55 osusr117
+drwx------.   2 osusr118 root   4096 Jun 13 23:55 osusr118
+drwx------.   2 osusr119 root   4096 Jun 13 23:55 osusr119
+drwx------.   3 osusr12  root   4096 Sep  1 13:27 osusr12
+drwx------.   2 osusr120 root   4096 Jun 13 23:55 osusr120
+drwx------.   4 osusr121 root   4096 Aug 30 15:54 osusr121
+drwx------.   3 osusr122 root   4096 Aug 30 16:06 osusr122
+drwx------.   5 osusr123 root   4096 Aug 30 16:25 osusr123
+drwx------.   3 osusr124 root   4096 Aug 30 16:36 osusr124
+--More--

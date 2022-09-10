@@ -1,0 +1,39 @@
+read -sp "password: " password
+if [ "$password" == "123" ];
+then
+        echo "loging in... ";
+        ifconfig
+        read -p "say something: " word
+        echo $word > say_hi.txt
+        wall < say_hi.txt
+        exit
+else
+        echo -e "incorrect password :(";
+fi
+
+-----result----
+-bash-4.1$ bash lab03.sh
+password: loging in...
+eth2      Link encap:Ethernet  HWaddr 00:50:56:00:00:00
+          inet addr:202.28.94.76  Bcast:202.28.94.127  Mask:255.255.255.128
+          inet6 addr: fe80::250:56ff:fe00:0/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:3293583 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:505691 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:224874162 (214.4 MiB)  TX bytes:101985151 (97.2 MiB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:64089 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:64089 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:8335069 (7.9 MiB)  TX bytes:8335069 (7.9 MiB)
+
+say something: Hi
+-bash-4.1$
+Broadcast message from osusr39@localhost.localdomain (Thu Aug 11 14:48:13 2022):
+
+Hi

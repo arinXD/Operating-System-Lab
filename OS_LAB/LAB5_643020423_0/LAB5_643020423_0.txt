@@ -1,0 +1,31 @@
+function SUM_NUM(){
+        strNumber=$1
+        length=${#strNumber}
+        for ((i=0;i<$length;i++))
+        do
+                buff=${strNumber:i:1};
+                sum=$(($sum+$buff));
+        done
+}
+
+while true;
+        do
+
+        read -p "-lab05.sh\insert number> " number
+        if [ $number -ge 0 ] && [ $number -le 20000 ];
+        then
+                sum=0
+                SUM_NUM $number
+                echo "--------------"
+                echo "   reslut: "$sum
+                echo ""
+                break
+        else
+                echo "bad input: 0-20,000"
+        fi
+done
+
+result:
+-lab05.sh\insert number> 678
+--------------
+   reslut: 21

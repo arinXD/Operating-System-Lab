@@ -1,0 +1,15 @@
+function READ_FILE(){
+        fileName=$1
+        fileEx=${fileName#*.}
+}
+
+read -p "-lab06.sh:\insert_file> " fname
+READ_FILE $fname
+echo "--------------";
+echo "   Extention file: "$fileEx;
+echo "";
+
+result:
+-lab06.sh:\insert_file> say_hi.txt
+--------------
+   Extention file: txt

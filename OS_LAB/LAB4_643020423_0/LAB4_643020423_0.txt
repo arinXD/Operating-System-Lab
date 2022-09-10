@@ -1,0 +1,53 @@
+read -p "file's name: " fileName
+ls -l $fileName
+echo ""
+read -p "owner permission: " owner
+echo "Add" $owner "to owner permission..."
+
+echo ""
+read -p "group permission: " group
+echo "Add" $group "to group permission..."
+
+echo ""
+read -p "public permission: " public
+echo "Add" $public "to public permission..."
+
+echo ""
+echo "//// Summary ////"
+echo "owner:" $owner
+echo "group:" $group
+echo "public:" $public
+echo "/////////////////"
+
+chmod $owner$group$public $fileName
+echo ""
+echo "---------------------------------------------------"
+echo "                !New permission is!"
+ls -l $fileName
+echo "---------------------------------------------------"
+
+result
+
+-bash-4.1$ bash lab04.sh
+file's name: info.txt
+-rwxr--r--. 1 osusr39 739 46 Aug 11 13:15 info.txt
+
+owner permission: 7
+Add 7 to owner permission...
+
+group permission: 7
+Add 7 to group permission...
+
+public permission: 7
+Add 7 to public permission...
+
+//// Summary ////
+owner: 7
+group: 7
+public: 7
+/////////////////
+
+---------------------------------------------------
+                |New permission is|
+-rwxrwxrwx. 1 osusr39 739 46 Aug 11 13:15 info.txt
+---------------------------------------------------

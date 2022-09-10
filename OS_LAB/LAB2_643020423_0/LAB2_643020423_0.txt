@@ -1,0 +1,27 @@
+#643020423-0
+while true ;
+ do
+        echo ''
+        echo ' MENU testing'
+        echo '1) Show my user login'
+        echo '2) Show all user for current login'
+        echo '3) Show all detail of file and directory in /home ditectory'
+        echo '4) Show my process'
+        echo '5) Show calender current month and year'
+        echo '6) Show calender all month for year 2021'
+        echo '7) exit'
+        read -p "Select no: " vno1
+        echo '-------------------------'
+        case "$vno1" in
+         1) whoami;;
+         2) who;;
+         3) ls -la /home | more;;
+         4) ps;;
+         5) cal;;
+         6) cal 2022;;
+         7) echo 'Finished THX U 4 USING :)'
+            echo '-------------------------'
+            break;;
+        esac
+        echo '--------------------'
+done
